@@ -29,9 +29,9 @@ function generatePassword() {
   if (returnLowerCase === true) {
     alert("Password will contain Lower Case Letters!");
   }
-  else { 
+  else {
     alert("Password will not contain Lower Case Letters!");
-  }  
+  }
 
   returnNumbers = confirm("Do you want to use Numbers?");
   if (returnNumbers === true) {
@@ -52,8 +52,8 @@ function generatePassword() {
   if (returnUpperCase === false && returnLowerCase === false && returnNumbers === false && returnSpecial === false) {
     alert("You must click 'OK' for one of the options");
   }
-//combine variables to choose characters
-  let combine = [];
+  //combine variables to choose characters
+  var combine = [];
   if (returnUpperCase === true) {
     combine += upperCase;
   }
@@ -69,11 +69,15 @@ function generatePassword() {
 
   console.log(combine);  //combines selected items based on whether click "ok" or "cancel"
     
+ 
+  var yourPassword;
+  for (let i = 0; i < numberOfDigits; i++){
 
+    let randomNumber = [Math.floor(Math.random() * combine.length)];
+    yourPassword += combine(randomNumber);
+  } 
 
-  
-
-
+  return yourPassword;
 
 }
 // Assignment Code
