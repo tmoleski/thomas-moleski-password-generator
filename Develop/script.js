@@ -1,6 +1,3 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
 
 
 function generatePassword() {
@@ -22,14 +19,14 @@ function generatePassword() {
 
 
   returnUpperCase = confirm("Do you want to use upper case letters?");
-  if (returnUpperCase = true) {
+  if (returnUpperCase === true) {
     alert("Password will contain Upper Case letters!");
   }
   else {
     alert("Password will not contain Upper Case");
   }
   returnLowerCase = confirm("Do you want to use lower case letters?");
-  if (returnLowerCase = true) {
+  if (returnLowerCase === true) {
     alert("Password will contain Lower Case Letters!");
   }
   else { 
@@ -37,7 +34,7 @@ function generatePassword() {
   } 
 
   returnNumbers = confirm("do you want to use Numbers?");
-  if (returnNumbers = true) {
+  if (returnNumbers === true) {
     alert("Password will contain Numbers!");
   }
   else {
@@ -45,24 +42,28 @@ function generatePassword() {
   }
 
   returnSpecial = confirm("Do you want to use Special Characters?");
-  if (returnSpecial = true) {
+  if (returnSpecial === true) {
     alert("Password will contain Special Characters!");
   }
   else {
     alert("Password will not contain Special Characters!");
   }
 
+  if (returnUpperCase === false && returnLowerCase === false && returnNumbers === false && returnSpecial === false) {
+    alert("You must click 'OK' for one of the options");
+  }
+
+         
 
 
 
-
-
-
-
+  // Assignment Code
 
 
 
 }
+
+var generateBtn = document.querySelector("#generate");
 //Write password to the #password input
 function writePassword() {
   var password = generatePassword();
