@@ -2,13 +2,14 @@
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "'", "+", "-", ".", ":", ";", ",", "/", "<", ">", "=", "?", "{", "}", "|", "~"];
+var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "'", "+", "-", ".", ":", ";", "/", "<", ">", "=", "?", "{", "}", "~"];
 
 
 function generatePassword() {
 
 
   //questions to ask user 
+  
   numberOfDigits = prompt("How many characters would you like your password to contain?");
   if (numberOfDigits < 8 || numberOfDigits > 128) {
     prompt("Your password must be more than 8 characters or less than 128 characters");
@@ -55,26 +56,26 @@ function generatePassword() {
   //combine variables to choose characters
   var combine = [];
   if (returnUpperCase === true) {
-    combine += upperCase;
+    combine = combine.concat(upperCase);
   }
   if (returnLowerCase === true) {
-    combine += lowerCase;
+    combine = combine.concat(lowerCase);
   }
   if (returnNumbers === true) {
-    combine += numbers;
+    combine = combine.concat(numbers);
   }
   if (returnSpecial === true) {
-    combine += special;
+    combine = combine.concat(special);
   }
 
   console.log(combine);  //combines selected items based on whether click "ok" or "cancel"
     
- 
-  var yourPassword;
+ // Loop for password length
+  var yourPassword ="";
   for (let i = 0; i < numberOfDigits; i++){
 
     let randomNumber = [Math.floor(Math.random() * combine.length)];
-    yourPassword += combine(randomNumber);
+    yourPassword += combine[randomNumber];
   } 
 
   return yourPassword;
