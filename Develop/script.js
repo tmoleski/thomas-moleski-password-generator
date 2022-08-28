@@ -1,12 +1,12 @@
-
-
-function generatePassword() {
-
   // all characters and options for password 
   var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "'", "+", "-", ".", ":", ";", ",", "/", "<", ">", "=", "?", "{", "}", "|", "~"];
+
+
+function generatePassword() {
+
 
   //questions to ask user 
   numberOfDigits = prompt("How many characters would you like your password to contain?");
@@ -52,17 +52,31 @@ function generatePassword() {
   if (returnUpperCase === false && returnLowerCase === false && returnNumbers === false && returnSpecial === false) {
     alert("You must click 'OK' for one of the options");
   }
+//combine variables to choose characters
+  // let combine = [];
+  // if (returnUpperCase === true) {
+  //   combine = combine.concat(upperCase);
+  // }
+  // if (returnLowerCase === true) {
+  //   combine = combine.concat(lowerCase);
+  // }
+  // if (returnNumbers === true) {
+  //   combine = combine.concat(numbers);
+  // }
+  // if (returnSpecial === true) {
+  //   combine = combine.concat(special);
+  // }
 
-         
+  // console.log(combine);
+    
 
 
-
-  // Assignment Code
+  
 
 
 
 }
-
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 //Write password to the #password input
 function writePassword() {
