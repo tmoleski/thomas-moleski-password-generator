@@ -1,3 +1,5 @@
+//Final Solution
+
 // all characters and options for password 
 // alternate code using arrays
 // var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -61,20 +63,20 @@ function generatePassword() {
   }
   //combine variables to choose characters
   var combine = [];
-  if (returnUpperCase) {
+  if (returnUpperCase === true) {
     // alternate code when using arrays
     // combine = combine.concat(upperCase);
     combine += upperCase;
   }
-  if (returnLowerCase) {
+  if (returnLowerCase === true) {
     // combine = combine.concat(lowerCase);
     combine += lowerCase;
   } 
-  if (returnNumbers) {
+  if (returnNumbers === true) {
     // combine = combine.concat(numbers);
     combine += numbers;
   }
-  if (returnSpecial) {
+  if (returnSpecial === true) {
     // combine = combine.concat(special);
     combine += special;
   }
